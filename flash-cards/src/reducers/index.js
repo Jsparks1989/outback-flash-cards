@@ -28,6 +28,22 @@ const questionAnswerReducer = () => {
             question: 'is the ribeye cooked on the flat-top or woodfire grill',
             answer: 'woodfire grill'
         },
+        {
+            question: 'Test question 1',
+            answer: 'Test answer 1'
+        },
+        {
+            question: 'Test question 2',
+            answer: 'Test answer 2'
+        },
+        {
+            question: 'Test question 3',
+            answer: 'Test answer 3'
+        },
+        {
+            question: 'Test question 4',
+            answer: 'Test answer 4'
+        },
     ];
 }
 
