@@ -5,13 +5,24 @@
 //   Try this:
 
 
+//-- Solution Works! --//
+//=======================
+
+//-- The possible issue before was that the state was not 
+//   changing/updating so the component was not being re-rendered to show the changes.
+
+//-- Will keep this solution for now. Possible change in the near future is to make randomNumber
+//   a reducer that checks for an action. The Next button will trigger the action which will have 
+//   a payload of a random number. So everytime Next is clicked, the randomQuestion will generate a random number,
+//   set the random number as action.payload, and update randomNumber reducer with it. 
+
 
 import React from 'react';
 import { connect } from 'react-redux';
 
 
-class FlashCards extends React.Component {
-
+//class FlashCards extends React.Component {
+class StackOverflow2 extends React.Component{
     state = {
        randomNumber: 0
     }
@@ -20,11 +31,21 @@ class FlashCards extends React.Component {
         var num = Math.floor(Math.random() * arry.length);
         //const display = arry[Math.floor(Math.random() * arry.length)];
         this.setState({randomNumber: num});
+        //-- Add code that will reset answer.style.display:'none'. 
+        //   Have a bug that shows the answer first, not question, sometimes when Next is clicked. 
     }
 
 
     flipDisplay = () => {
-        // your flipDisplay function, no changes here
+        const x = document.getElementById("question");
+        const y = document.getElementById("answer");
+        if (x.style.display === 'none' && y.style.display === 'block') {
+          x.style.display = 'block';
+          y.style.display = 'none'
+        } else {
+          x.style.display = 'none';
+          y.style.display = 'block'
+        }
     }
 
 
@@ -56,4 +77,5 @@ const mapStateToProps = (state) => {
     };
 }
 
-export default connect(mapStateToProps)(FlashCards);
+//export default connect(mapStateToProps)(FlashCards);
+export default connect(mapStateToProps)(StackOverflow2);

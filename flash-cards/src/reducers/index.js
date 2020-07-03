@@ -48,6 +48,11 @@ const questionAnswerReducer = () => {
 }
 
 
+const randomNumber = (state=0, action) => {
+    
+}
+
+
 
 export default combineReducers({
     questionAnswer: questionAnswerReducer
