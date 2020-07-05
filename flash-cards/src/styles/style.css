@@ -1,0 +1,17 @@
+#question {
+    border-style: solid;
+}
+
+#answer {
+    border-style: solid;
+}
+
+#flip-button {
+    /* background-color: #720008; */
+    margin-top: 2em;
+}
+
+#next-button {
+    /* background-color: #720008; */
+    margin-top: 2em;
+}
